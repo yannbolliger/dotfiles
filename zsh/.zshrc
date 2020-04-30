@@ -102,6 +102,8 @@ eval "$(nodenv init -)"
 # RBENV
 eval "$(rbenv init -)"
 
+# RUSTUP
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
