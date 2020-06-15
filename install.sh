@@ -34,3 +34,5 @@ ln -fhs "$PWD/zsh/.zshrc" "$HOME/.zshrc"
 ln -fhs "$PWD/zsh/custom/aliases.zsh" "$ZSH/custom/aliases.zsh"
 
 ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
+
+cp "$PWD/com.apple.Terminal.plist" "$HOME/Library/Preferences/com.apple.Terminal.plist"
