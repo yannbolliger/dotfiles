@@ -1,0 +1,31 @@
+"*":
+  "atom-typescript":
+    preferBuiltinBusySignal: true
+    preferBuiltinOccurrenceHighlight: true
+    preferBuiltinSigHelp: true
+    preferBuiltinTooltips: true
+  core:
+    disabledPackages: [
+      "metrics"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "piatto-light-syntax"
+    ]
+  editor:
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "0c254af6-69cd-4639-a685-a97dfc79f226"
+  fonts:
+    fontFamily: "Source Code Pro Medium"
+  "linter-eslint":
+    disabling: {}
+  "linter-ui-default":
+    panelHeight: 80
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+  welcome:
+    showOnStartup: false

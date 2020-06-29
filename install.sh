@@ -13,17 +13,12 @@ if [[ -z $(command -v brew) ]]; then
 fi
 
 # Install first stuff with brew
-if [[ -z $(command -v autojump) ]]; then
-  brew install autojump rbenv nodenv
-fi
-
-if [[ -z $(command -v rbenv) ]]; then
-  brew install rbenv nodenv
-fi
-
-if [[ -z $(command -v nodenv) ]]; then
-  brew install nodenv
-fi
+for program in autojump rbenv nodenv
+do
+  if [[ -z $(command -v $program) ]]; then
+    brew install $program
+  fi
+done
 
 # Install oh-my-zsh
 if [[ -z "$ZSH" ]]; then
@@ -36,3 +31,10 @@ ln -fhs "$PWD/zsh/custom/aliases.zsh" "$ZSH/custom/aliases.zsh"
 ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
 
 cp "$PWD/com.apple.Terminal.plist" "$HOME/Library/Preferences/com.apple.Terminal.plist"
+
+
+# Atom
+for file in $PWD/atom/*
+do
+  ln -fhs $file "$HOME/.atom/${file:t}"
+done
