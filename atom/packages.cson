@@ -1,5 +1,6 @@
 packages: [
   "atom-typescript"
+  "ayu-mirage-ish-syntax"
   "busy-signal"
   "file-icons"
   "intentions"
