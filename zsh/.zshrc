@@ -105,6 +105,10 @@ eval "$(rbenv init -)"
 # RUSTUP
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# GO
+export GOPATH="$HOME/.go"
+export PATH=$PATH:$(go env GOPATH)/bin
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
