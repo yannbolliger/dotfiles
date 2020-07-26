@@ -4,6 +4,8 @@
     preferBuiltinOccurrenceHighlight: true
     preferBuiltinSigHelp: true
     preferBuiltinTooltips: true
+  autosave:
+    enabled: true
   core:
     disabledPackages: [
       "metrics"
@@ -11,7 +13,7 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "ayu-mirage-ish-syntax"
+      "piatto-light-syntax"
     ]
   editor:
     showIndentGuide: true
@@ -21,8 +23,7 @@
     fontFamily: "Source Code Pro Medium"
   "linter-eslint":
     disabling: {}
-  "linter-ui-default":
-    panelHeight: 80
+  "linter-ui-default": {}
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
