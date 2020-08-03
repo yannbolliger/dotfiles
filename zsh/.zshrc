@@ -106,8 +106,10 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # GO
-export GOPATH="$HOME/.go"
-export PATH=$PATH:$(go env GOPATH)/bin
+if [[ ! -z $(command -v go) ]]; then
+  export GOPATH="$HOME/.go"
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
