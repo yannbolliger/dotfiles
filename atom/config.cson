@@ -28,5 +28,8 @@
     formatOnSaveOptions:
       enabled: true
       isDisabledIfNoConfigFile: true
+      showInStatusBar: true
+  "sass-autocompile":
+    compressedFilenamePattern: "$1.css"
   welcome:
     showOnStartup: false
