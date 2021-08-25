@@ -32,9 +32,3 @@ ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
 
 cp "$PWD/com.apple.Terminal.plist" "$HOME/Library/Preferences/com.apple.Terminal.plist"
 
-
-# Atom
-for file in $PWD/atom/*
-do
-  ln -fhs $file "$HOME/.atom/${file:t}"
-done
