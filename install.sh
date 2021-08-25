@@ -12,7 +12,14 @@ if [[ -z $(command -v brew) ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-# Install first stuff with brew
+for program in firefox visual-studio-code fork macpass notion whatsapp signal slack intellij-idea spotify
+do
+  if ! brew list --cask $program &>/dev/null; then
+    brew install --cask $program
+  fi
+done
+
+# Install first commands with brew
 for program in autojump rbenv nodenv
 do
   if [[ -z $(command -v $program) ]]; then
