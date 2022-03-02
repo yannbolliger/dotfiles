@@ -104,6 +104,9 @@ unsetopt share_history
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # NODENV
 eval "$(nodenv init -)"
 
