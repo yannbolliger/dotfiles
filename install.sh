@@ -12,8 +12,21 @@ if [[ -z $(command -v brew) ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-for program in firefox visual-studio-code fork macpass notion whatsapp signal slack intellij-idea spotify
-do
+casks=(
+  firefox
+  visual-studio-code
+  fork
+  macpass
+  notion
+  whatsapp
+  signal
+  slack
+  intellij-idea
+  spotify
+  todoist
+)
+
+for program in $casks; do
   if ! brew list --cask $program &>/dev/null; then
     brew install --cask $program
   fi
