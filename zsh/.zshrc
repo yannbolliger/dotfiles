@@ -107,6 +107,7 @@ unsetopt share_history
 # Brew
 if [[ $(arch) == 'arm64' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export PATH="${PATH}:$(brew --prefix)/opt/python/libexec/bin"
 fi
 
 # NODENV
