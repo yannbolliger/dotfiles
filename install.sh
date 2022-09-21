@@ -33,7 +33,7 @@ for program in $casks; do
 done
 
 # Install first commands with brew
-for program in autojump rbenv nodenv
+for program in autojump rbenv nodenv gh
 do
   if [[ -z $(command -v $program) ]]; then
     brew install $program
