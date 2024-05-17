@@ -113,15 +113,7 @@ fi
 # NODENV
 eval "$(nodenv init -)"
 
-# RBENV
-eval "$(rbenv init -)"
-
 # RUSTUP
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# GO
-if [[ ! -z $(command -v go) ]]; then
-  export GOPATH="$HOME/.go"
-  export PATH=$PATH:$(go env GOPATH)/bin
-fi
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
