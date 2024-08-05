@@ -22,3 +22,7 @@ function notify {
     text="$@"
     osascript -e "display notification \"$text\" sound name \"Basso\""
 }
+
+alias cb="cargo build"
+alias ct="cargo test"
+alias cct="cargo clippy && cargo test"
