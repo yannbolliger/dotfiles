@@ -6,6 +6,12 @@ function branch_top {
 }
 alias bt=branch_top
 
+function spr_land {
+    BRANCH=$(git_current_branch)
+    spr land && gcm && gl && gb --delete $BRANCH
+}
+alias sprl=spr_land
+
 function approve_many {
     if [ $# -ne 2 ]; then 
         echo "approve_many <first pr id> <number of prs>"
