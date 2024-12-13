@@ -21,7 +21,6 @@ casks=(
   whatsapp
   signal
   slack
-  intellij-idea
   spotify
   todoist
 )
