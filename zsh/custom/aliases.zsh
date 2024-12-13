@@ -12,17 +12,6 @@ function spr_land {
 }
 alias sprl=spr_land
 
-function approve_many {
-    if [ $# -ne 2 ]; then 
-        echo "approve_many <first pr id> <number of prs>"
-        return 1
-    fi
-    for i in {$1..$(($1 + $2 - 1))}; do 
-        gh pr review -a $i
-    done
-}
-alias apm=approve_many
-
 # by @ex0ns
 function notify {
     text="$@"
