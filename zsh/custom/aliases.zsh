@@ -19,5 +19,6 @@ function notify {
 }
 
 alias cb="cargo build"
-alias ct="cargo test"
-alias cct="cargo clippy && cargo test"
+alias cl="cargo clippy"
+alias ct="cargo nextest run"
+alias clt="cargo clippy && cargo nextest run"

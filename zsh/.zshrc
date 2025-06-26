@@ -116,4 +116,6 @@ eval "$(nodenv init -)"
 # RUSTUP
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# POSTGRES
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
