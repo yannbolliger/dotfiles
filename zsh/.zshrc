@@ -94,6 +94,7 @@ export LANG=en_GB.UTF-8
 
 # History config
 unsetopt share_history
+setopt INC_APPEND_HISTORY
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

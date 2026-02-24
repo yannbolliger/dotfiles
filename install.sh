@@ -17,10 +17,10 @@ casks=(
   visual-studio-code
   fork
   macpass
+  ghostty
   notion
   whatsapp
   signal
-  slack
   spotify
   todoist
 )
@@ -47,7 +47,8 @@ fi
 ln -fhs "$PWD/zsh/.zshrc" "$HOME/.zshrc"
 ln -fhs "$PWD/zsh/custom/aliases.zsh" "$ZSH/custom/aliases.zsh"
 
-ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
+mkdir -p "$HOME/.config/ghostty"
+ln -fhs "$PWD/ghostty/config" "$HOME/.config/ghostty/config"
 
-cp "$PWD/com.apple.Terminal.plist" "$HOME/Library/Preferences/com.apple.Terminal.plist"
+ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
 
