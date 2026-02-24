@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-PWD=$(pwd)
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Install command line tools
-if [[ -z $(command -v xcode-select) ]]; then
+if ! xcode-select -p &>/dev/null; then
   xcode-select --install
 fi
 
@@ -40,15 +40,27 @@ do
 done
 
 # Install oh-my-zsh
-if [[ -z "$ZSH" ]]; then
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-ln -fhs "$PWD/zsh/.zshrc" "$HOME/.zshrc"
-ln -fhs "$PWD/zsh/custom/aliases.zsh" "$ZSH/custom/aliases.zsh"
+ZSH="${ZSH:-$HOME/.oh-my-zsh}"
+
+# Install Rust toolchain
+if [[ -z $(command -v rustup) ]]; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+# Install cargo extensions
+if [[ -z $(command -v cargo-nextest) ]]; then
+  cargo install cargo-nextest
+fi
+
+ln -fhs "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+ln -fhs "$DOTFILES_DIR/zsh/custom/aliases.zsh" "$ZSH/custom/aliases.zsh"
 
 mkdir -p "$HOME/.config/ghostty"
-ln -fhs "$PWD/ghostty/config" "$HOME/.config/ghostty/config"
+ln -fhs "$DOTFILES_DIR/ghostty/config" "$HOME/.config/ghostty/config"
 
-ln -fhs "$PWD/.prettierrc" "$HOME/.prettierrc"
+ln -fhs "$DOTFILES_DIR/.prettierrc" "$HOME/.prettierrc"
 
