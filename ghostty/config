@@ -5,3 +5,5 @@ font-family-bold = SF Mono Bold
 font-family-italic = SF Mono Regular Italic
 font-family-bold-italic = SF Mono Bold Italic
 background= #2b303e
+
+shell-integration-features = ssh-terminfo
