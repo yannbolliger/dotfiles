@@ -18,7 +18,11 @@ function notify {
     osascript -e "display notification \"$text\" sound name \"Basso\""
 }
 
+# cargo
 alias cb="cargo build"
 alias cl="cargo clippy"
 alias ct="cargo nextest run"
 alias clt="cargo clippy && cargo nextest run"
+
+# yt-dl for music
+alias ytmp3="yt-dlp -x --audio-format mp3 --embed-thumbnail --embed-metadata --ppa 'ThumbnailsConvertor:-vf crop=ih:ih'"
