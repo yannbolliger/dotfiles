@@ -14,17 +14,18 @@ fi
 
 casks=(
   firefox
-  visual-studio-code
   fork
-  macpass
   ghostty
+  macpass
   notion
-  whatsapp
+  protonvpn
   signal
   spotify
-  todoist
+  todoist-app
+  visual-studio-code
+  vlc
+  whatsapp
 )
-
 for program in $casks; do
   if ! brew list --cask $program &>/dev/null; then
     brew install --cask $program
@@ -32,7 +33,16 @@ for program in $casks; do
 done
 
 # Install first commands with brew
-for program in autojump nodenv gh
+formulae=(
+  autojump
+  gh
+  jq
+  nodenv
+  qrencode
+  uv
+  yt-dlp
+)
+for program in $formulae
 do
   if [[ -z $(command -v $program) ]]; then
     brew install $program
